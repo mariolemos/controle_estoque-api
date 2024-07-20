@@ -8,7 +8,7 @@ public class ControleEstoqueApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ControleEstoqueApiApplication.class, args);
-		System.out.println("Projeto Criado");
+
 	}
 
 }

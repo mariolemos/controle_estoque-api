@@ -1,0 +1,16 @@
+#spring.datasource.driver-class-name=org.h2.Driver
+#spring.datasource.url=jdbc:h2:mem:sdw2023
+#spring.datasource.username=sdw2023
+#spring.datasource.password=
+#spring.h2.console.enabled=true
+#spring.h2.console.path=/h2
+#spring.jpa.hibernate.ddl-auto=create
+#spring.jpa.show-sql=true
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring:
+  profiles:
+    active: ${SPRING_PROFILE_ACTIVE}
+
+springdoc:
+  api-docs:
+    path: /api-docs
