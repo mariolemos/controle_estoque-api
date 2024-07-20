@@ -25,8 +25,6 @@ public class EmpresaService {
 
     public Empresa incluir(Empresa obj){
         obj.setId(null);
-        obj.setClientes(null);
-        obj.setFornecedors(null);
         obj.setProdutos(null);
         return empresaRepository.save(obj);
     }

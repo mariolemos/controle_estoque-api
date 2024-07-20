@@ -14,14 +14,15 @@ public class Produto {
     @ManyToOne
     private Categoria categoria;
     private int saldoEstoque;
-    private double preço;
+    @Column(name = "preco")
+    private double preco;
 
-    public Produto(Long id, String descricao, Categoria categoria, int saldoEstoque, double preço) {
+    public Produto(Long id, String descricao, Categoria categoria, int saldoEstoque, double preco) {
         this.id = id;
         this.descricao = descricao;
         this.categoria = categoria;
         this.saldoEstoque = saldoEstoque;
-        this.preço = preço;
+        this.preco = preco;
     }
 
     public Long getId() {
@@ -56,12 +57,12 @@ public class Produto {
         this.saldoEstoque = saldoEstoque;
     }
 
-    public double getPreço() {
-        return preço;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setPreço(double preço) {
-        this.preço = preço;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     @Override
@@ -71,7 +72,7 @@ public class Produto {
                 ", descricao='" + descricao + '\'' +
                 ", categoria=" + categoria +
                 ", saldoEstoque=" + saldoEstoque +
-                ", preço=" + preço +
+                ", preço=" + preco +
                 '}';
     }
 

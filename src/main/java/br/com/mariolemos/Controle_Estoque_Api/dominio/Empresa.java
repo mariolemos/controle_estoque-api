@@ -11,28 +11,20 @@ public class Empresa {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
-
     private String razaoSocial;
     @Column(unique = true)
     private String cnpj;
     @OneToMany
-    private List<Cliente> clientes;
-    @OneToMany
-    private List<Fornecedor> fornecedors;
-    @OneToMany
-    private List<Produto> produtos;
+    private List<Produto> produtos ;
 
     public Empresa(){
 
     }
 
-
-    public Empresa(Long id, String razaoSocial, String cnpj, List<Cliente> clientes, List<Fornecedor> fornecedors, List<Produto> produtos) {
+    public Empresa(Long id, String razaoSocial, String cnpj, List<Produto> produtos) {
         this.id = id;
         this.razaoSocial = razaoSocial;
         this.cnpj = cnpj;
-        this.clientes = clientes;
-        this.fornecedors = fornecedors;
         this.produtos = produtos;
     }
 
@@ -60,22 +52,6 @@ public class Empresa {
         this.cnpj = cnpj;
     }
 
-    public List<Cliente> getClientes() {
-        return clientes;
-    }
-
-    public void setClientes(List<Cliente> clientes) {
-        this.clientes = clientes;
-    }
-
-    public List<Fornecedor> getFornecedors() {
-        return fornecedors;
-    }
-
-    public void setFornecedors(List<Fornecedor> fornecedors) {
-        this.fornecedors = fornecedors;
-    }
-
     public List<Produto> getProdutos() {
         return produtos;
     }
@@ -90,8 +66,6 @@ public class Empresa {
                 "id=" + id +
                 ", razaoSocial='" + razaoSocial + '\'' +
                 ", cnpj='" + cnpj + '\'' +
-                ", clientes=" + clientes +
-                ", fornecedors=" + fornecedors +
                 ", produtos=" + produtos +
                 '}';
     }

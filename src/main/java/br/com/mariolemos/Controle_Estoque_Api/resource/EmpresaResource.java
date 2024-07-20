@@ -25,8 +25,8 @@ public class EmpresaResource {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Empresa>> listarTodos() {
-        List<Empresa>obj = service.buscarTodos();
+    public ResponseEntity<List<Empresa>> buscarTodos() {
+        List<Empresa> obj = service.buscarTodos();
         return ResponseEntity.ok().body(obj);
     }
 
