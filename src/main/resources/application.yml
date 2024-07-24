@@ -10,8 +10,7 @@
 spring:
   profiles:
     active: ${SPRING_PROFILE_ACTIVE}
-
-
+    
 springdoc:
   api-docs:
     path: /api-docs
